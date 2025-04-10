@@ -7,7 +7,10 @@
 }
 
 body{
-    background-color: black;
+    background-image: url(/assets/bacgroumd.jpg);
+    height: 100%;
+    width: 100%;
+    color: white;
 }
 
 .headercontact{
@@ -134,7 +137,7 @@ a{
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    width: 350px;
+    width: 450px;
     background-color: white;
     color: black;
     /* border: #f35b04 0.1px solid; */
@@ -147,7 +150,7 @@ a{
 }
 
 .serviceimage img{
-    width: 370px;
+    width: 470px;
     height: 300px;
 }
 
@@ -167,3 +170,168 @@ a{
     text-decoration: none;
 
 }
+
+.projectheader h1{
+    font-size: 40px;
+}
+.projectsection{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 150px;
+}
+
+.projectimage{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    width: 750px;
+}
+
+.projectimage img{
+    width: 750px;
+    height: 470px;
+    overflow: hidden;
+}
+
+.projectsbox{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 30px;
+    background-color: white;
+    padding: 20px;
+    width: 100%;
+}
+
+.projectbox{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 750px;
+    height: 550px;
+    box-shadow: 0 0 30px #494848;
+    background-color: white;
+    color: black;
+    overflow: hidden;
+    border-radius: 20px;
+}
+
+.projectbox1{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 750px;
+    height: 500px;
+    box-shadow: 0 0 30px #494848;
+    background-color: white;
+    color: black;
+    overflow: hidden;
+    border-radius: 20px;
+}
+
+.projectbox2{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 750px;
+    height: 500px;
+    box-shadow: 0 0 30px #494848;
+    background-color: white;
+    color: black;
+    overflow: hidden;
+    border-radius: 20px;
+}
+
+.projectbox3{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 750px;
+    height: 500px;
+    background-color: white;
+    box-shadow: 0 0 30px #494848;
+    color: black;
+    overflow: hidden;
+    border-radius: 20px;
+}
+
+ @media screen and (max-width:900px) {
+
+    
+    .serviceboxs{
+        padding: 50px;
+    }
+    .serviceimage img{
+        width: 4605x;
+    }
+    .servicebox{
+        width: 450px; 
+       
+    }
+    .projectsbox{
+        width: 85%;
+       }
+       .projectbox{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        width: 400px;
+        height: 700px;
+        box-shadow: 0 0 30px #494848;
+        background-color: white;
+        color: black;
+        overflow: hidden;
+        border-radius: 20px;
+    }
+
+    .projectbox1{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        width: 400px;
+        height: 540px;
+        box-shadow: 0 0 30px #494848;
+        background-color: white;
+        color: black;
+        overflow: hidden;
+        border-radius: 20px;
+    }
+
+    .projectbox2{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        width: 400px;
+        height: 540px;
+        box-shadow: 0 0 30px #494848;
+        background-color: white;
+        color: black;
+        overflow: hidden;
+        border-radius: 20px;
+    }
+
+    .projectbox3{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        width: 400px;
+        height: 540px;
+        background-color: white;
+        box-shadow: 0 0 30px #494848;
+        color: black;
+        overflow: hidden;
+        border-radius: 20px;
+    }
+ }

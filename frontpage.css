@@ -7,8 +7,17 @@
 }
 
 body{
-    background-color: rgb(14, 9, 1);  
+    /* background-color: rgb(14, 9, 1);   */
+    /* background-image: url(/assets/bacgroumd.jpg);
+   background-repeat: no-repeat;
+   background-size: cover;
+   width: 100%;
+   height: 100%;
+    color: white; */
+    background-image: url(/assets/bacgroumd.jpg);
     color: white;
+     width: 100%;
+   height: 100%;
 }
 
 .headercontact{
@@ -19,6 +28,10 @@ body{
   justify-content: center;
   align-items: center;
   border-radius: 50px;
+}
+
+.bussinesname{
+    font-size: 60px;
 }
 li{
     list-style: none;
@@ -168,7 +181,7 @@ a{
         justify-content: center;
         align-items: center;
         flex-direction: column;
-        width: 350px;
+        width: 450px;
         background-color: white;
         color: black;
         /* border: #f35b04 0.1px solid; */
@@ -181,7 +194,7 @@ a{
     }
 
     .serviceimage img{
-        width: 370px;
+        width: 470px;
         height: 300px;
     }
 
@@ -202,7 +215,224 @@ a{
 
     }
 
+    .contactsecition{
+        margin: 150px 20px;
+        background-color: white;
+        color: black;
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+        width: 98%;
+        padding: 20px 0;
+    }
+
+    .contactone{
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        gap: 20px;
+        width: 50%;
+    }
+
+    .contacttwo{
+        background-color: #f35b04;
+        height: 250px;
+        width: 400px;
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        align-items: center;
+        gap: 15px;
+        border-radius: 30px;
+        color: white;
+    }
+
+    .number{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
    
+    .contactimage{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 10px;
+    }
+
+    .contactimage img{
+        border-radius: 10px;
+    }
+
+    .projectheader h1{
+        font-size: 40px;
+    }
+    .projectsection{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        gap: 150px;
+    }
+
+    .projectimage{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 10px;
+        width: 750px;
+    }
+
+    .projectimage img{
+        width: 750px;
+        height: 470px;
+        overflow: hidden;
+    }
+
+    .projectsbox{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+        gap: 30px;
+        background-color: white;
+        padding: 20px;
+        width: 100%;
+    }
+
+    .projectbox{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        width: 750px;
+        height: 550px;
+        box-shadow: 0 0 30px #494848;
+        background-color: white;
+        color: black;
+        overflow: hidden;
+        border-radius: 20px;
+    }
+
+    .projectbox1{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        width: 750px;
+        height: 500px;
+        box-shadow: 0 0 30px #494848;
+        background-color: white;
+        color: black;
+        overflow: hidden;
+        border-radius: 20px;
+    }
+
+    .projectbox2{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        width: 750px;
+        height: 500px;
+        box-shadow: 0 0 30px #494848;
+        background-color: white;
+        color: black;
+        overflow: hidden;
+        border-radius: 20px;
+    }
+
+    .projectbox3{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        width: 750px;
+        height: 500px;
+        background-color: white;
+        box-shadow: 0 0 30px #494848;
+        color: black;
+        overflow: hidden;
+        border-radius: 20px;
+    }
     @media screen and (max-width:900px) {
+
+        .serviceimage img{
+            width: 417px;
+        }
+        .servicebox{
+            width: 400px; ;
+        }
+       .contactsecition{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 50px;
+        flex-direction: column;
+        width: 90%;
+       }
        
+       .contacttwo{
+        width: 300px;
+       }
+
+
+       .projectsbox{
+        width: 100%;
+       }
+       .projectbox{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        width: 400px;
+        height: 700px;
+        box-shadow: 0 0 30px #494848;
+        background-color: white;
+        color: black;
+        overflow: hidden;
+        border-radius: 20px;
+    }
+
+    .projectbox1{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        width: 400px;
+        height: 540px;
+        box-shadow: 0 0 30px #494848;
+        background-color: white;
+        color: black;
+        overflow: hidden;
+        border-radius: 20px;
+    }
+
+    .projectbox2{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        width: 400px;
+        height: 540px;
+        box-shadow: 0 0 30px #494848;
+        background-color: white;
+        color: black;
+        overflow: hidden;
+        border-radius: 20px;
+    }
+
+    .projectbox3{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        width: 400px;
+        height: 540px;
+        background-color: white;
+        box-shadow: 0 0 30px #494848;
+        color: black;
+        overflow: hidden;
+        border-radius: 20px;
+    }
     }

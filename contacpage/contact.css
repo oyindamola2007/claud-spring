@@ -7,7 +7,8 @@
 }
 
 body{
-    background-color: black;
+    background-image: url(/assets/bacgroumd.jpg);
+  color: black;
 }
 
 .headercontact{
@@ -113,4 +114,71 @@ a{
         top: 70px;
         gap: 0;
     }
+
+    
+}
+
+.contactsecition{
+    margin: px 20px;
+    background-color: white;
+    color: black;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 98%;
+    padding: 200px 0;
+}
+
+.contactone{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    gap: 20px;
+    font-size: 25px;
+    width: 50%;
+}
+
+.contacttwo{
+    background-color: #f35b04;
+    height: 350px;
+    width: 500px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+    border-radius: 30px;
+    color: white;
+}
+
+.number{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.contactimage{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+.contactimage img{
+    border-radius: 10px;
+}
+
+@media screen and (max-width:900px) {
+    .contactsecition{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 50px;
+        flex-direction: column;
+        width: 100%;
+       }
+       
+       .contacttwo{
+        width: 300px;
+       }
 }
