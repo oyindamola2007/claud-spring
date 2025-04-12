@@ -202,7 +202,7 @@ a{
     align-items: center;
     flex-wrap: wrap;
     gap: 30px;
-    background-color: white;
+    background-color: black;
     padding: 20px;
     width: 100%;
 }
@@ -214,9 +214,9 @@ a{
     flex-direction: column;
     width: 750px;
     height: 550px;
-    box-shadow: 0 0 30px #494848;
-    background-color: white;
-    color: black;
+    box-shadow: 0 0 10px #f35b04;
+    background-color: rgb(10, 10, 10);
+    color: white;
     overflow: hidden;
     border-radius: 20px;
 }
@@ -228,9 +228,9 @@ a{
     flex-direction: column;
     width: 750px;
     height: 500px;
-    box-shadow: 0 0 30px #494848;
-    background-color: white;
-    color: black;
+    box-shadow: 0 0 10px #f35b04;
+    background-color: rgb(10, 10, 10);
+    color: white;
     overflow: hidden;
     border-radius: 20px;
 }
@@ -242,9 +242,9 @@ a{
     flex-direction: column;
     width: 750px;
     height: 500px;
-    box-shadow: 0 0 30px #494848;
-    background-color: white;
-    color: black;
+    box-shadow: 0 0 10px #f35b04;
+    background-color: rgb(10, 10, 10);
+    color: white;
     overflow: hidden;
     border-radius: 20px;
 }
@@ -256,9 +256,9 @@ a{
     flex-direction: column;
     width: 750px;
     height: 500px;
-    background-color: white;
-    box-shadow: 0 0 30px #494848;
-    color: black;
+    box-shadow: 0 0 10px #f35b04;
+    background-color: rgb(10, 10, 10);
+    color: white;
     overflow: hidden;
     border-radius: 20px;
 }
