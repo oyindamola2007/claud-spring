@@ -168,6 +168,44 @@ a{
     border-radius: 10px;
 }
 
+footer{
+    display: flex;
+    flex-direction: column;
+    padding: 0px 40px;
+    color: white;
+}
+.footers{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 150px;
+}
+.footerlinks{
+    display: flex;
+    gap: 10px;
+    flex-direction: column;
+    padding: 20px 80px;
+    font-size: 20px;
+}
+
+.fooetermail{
+    display: flex;
+    align-items: center;
+    gap: 30px;
+}
+
+.officeadress{
+    display: flex;
+    align-items: center;
+    gap: 50px;
+}
+
+.contactimage{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 30px;
+}
 @media screen and (max-width:900px) {
     .contactsecition{
         display: flex;
@@ -181,4 +219,18 @@ a{
        .contacttwo{
         width: 300px;
        }
+       .footers{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .officeadress{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+    }
 }
