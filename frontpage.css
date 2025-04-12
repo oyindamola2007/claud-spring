@@ -352,12 +352,14 @@ a{
         flex-direction: column;
         padding: 0px 40px;
         background-image: url(/assets/bacgroumd.jpg);
+       
     }
     .footers{
         display: flex;
         justify-content: center;
         align-items: center;
         padding: 150px;
+        
     }
     .footerlinks{
         display: flex;
@@ -384,6 +386,12 @@ a{
         justify-content: center;
         align-items: center;
         padding: 30px;
+    }
+
+
+    .foterright{
+        padding: 20px;
+        border-top: 5px solid #a3a19e4d;
     }
     @media screen and (max-width:900px) {
 

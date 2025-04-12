@@ -206,6 +206,10 @@ footer{
     align-items: center;
     padding: 30px;
 }
+.foterright{
+    padding: 20px;
+    border-top: 5px solid #a3a19e4d;
+}
 @media screen and (max-width:900px) {
     .contactsecition{
         display: flex;
@@ -233,4 +237,5 @@ footer{
         align-items: center;
         flex-direction: column;
     }
+    
 }

@@ -301,6 +301,10 @@ footer{
     align-items: center;
     padding: 30px;
 }
+.foterright{
+    padding: 20px;
+    border-top: 5px solid #a3a19e4d;
+}
  @media screen and (max-width:900px) {
 
     
@@ -308,7 +312,7 @@ footer{
         padding: 50px;
         width: 75%;
     }
-    .serviceimage img{
+    .serviceimage img{  
         width: 300px;
     }
     .servicebox{
