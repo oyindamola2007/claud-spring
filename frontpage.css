@@ -81,7 +81,7 @@ a{
     .navbar{
         padding: 0 20px;
         position: fixed;
-        width: 80%;
+        width: 90%;
     }
     .hamburger{
         display: block;
@@ -387,11 +387,15 @@ a{
     }
     @media screen and (max-width:900px) {
 
+        .serviceboxs{
+            
+            width: 75%;
+        }
         .serviceimage img{
-            width: 417px;
+            width: 300px;
         }
         .servicebox{
-            width: 400px; ;
+            width: 300px; ;
         }
        .contactsecition{
         display: flex;
@@ -408,73 +412,27 @@ a{
 
 
        .projectsbox{
-        width: 100%;
+        width: 90%;
        }
-       .projectbox{
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        flex-direction: column;
+    
+    .projectbox{
         width: 400px;
         height: 700px;
-        box-shadow: 0 0 30px #494848;
-        background-color: white;
-        color: black;
-        overflow: hidden;
-        border-radius: 20px;
     }
 
     .projectbox1{
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        flex-direction: column;
         width: 400px;
-        height: 540px;
-        box-shadow: 0 0 30px #494848;
-        background-color: white;
-        color: black;
-        overflow: hidden;
-        border-radius: 20px;
+        height: 550px;
     }
 
     .projectbox2{
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        flex-direction: column;
         width: 400px;
-        height: 540px;
-        box-shadow: 0 0 30px #494848;
-        background-color: white;
-        color: black;
-        overflow: hidden;
-        border-radius: 20px;
+        height: 550px;
     }
-
     .projectbox3{
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        flex-direction: column;
         width: 400px;
-        height: 540px;
-        background-color: white;
-        box-shadow: 0 0 30px #494848;
-        color: black;
-        overflow: hidden;
-        border-radius: 20px;
+        height: 550px;
     }
-
-    .projectsection{
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        flex-direction: column;
-        flex-wrap: wrap;
-        margin: 0 10px;
-    }
-
     .footers{
         display: flex;
         justify-content: center;

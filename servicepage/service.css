@@ -306,12 +306,13 @@ footer{
     
     .serviceboxs{
         padding: 50px;
+        width: 75%;
     }
     .serviceimage img{
-        width: 400px;
+        width: 300px;
     }
     .servicebox{
-        width: 400px; 
+        width: 300px; 
        
     }
     .projectsbox{
