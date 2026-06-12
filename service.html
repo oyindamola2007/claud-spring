@@ -1,0 +1,460 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Claud Spring Services — Solar Energy, Farm Land, Real Estate, Crop Farming, Biodigester Systems." />
+  <title>Services | Claud Spring</title>
+  <link rel="stylesheet" href="../style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <style>
+    /* Services page extras */
+    .service-full {
+      padding: 100px 5%;
+      background: var(--black);
+    }
+
+    .service-full:nth-child(even) {
+      background: var(--card);
+    }
+
+    .service-full-inner {
+      max-width: 1300px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 5rem;
+      align-items: center;
+    }
+
+    .service-full:nth-child(even) .service-full-inner {
+      direction: rtl;
+    }
+
+    .service-full:nth-child(even) .service-full-inner > * {
+      direction: ltr;
+    }
+
+    .service-full-img {
+      width: 100%;
+      height: 420px;
+      object-fit: cover;
+      border-radius: var(--radius-lg);
+      border: 1px solid var(--border);
+    }
+
+    .service-full-text {}
+
+    .service-full-title {
+      font-family: var(--font-display);
+      font-weight: 800;
+      font-size: clamp(1.6rem, 3vw, 2.2rem);
+      letter-spacing: -0.02em;
+      color: var(--white);
+      margin: 1rem 0;
+      line-height: 1.2;
+    }
+
+    .service-full-title span { color: var(--orange); }
+
+    .service-full-desc {
+      font-size: 0.95rem;
+      color: var(--ash);
+      line-height: 1.75;
+      margin-bottom: 1.5rem;
+    }
+
+    .service-features {
+      display: flex;
+      flex-direction: column;
+      gap: 0.75rem;
+      margin-bottom: 2rem;
+    }
+
+    .service-feature {
+      display: flex;
+      align-items: flex-start;
+      gap: 10px;
+      font-size: 0.9rem;
+      color: var(--muted);
+    }
+
+    .service-feature::before {
+      content: '✓';
+      color: var(--orange);
+      font-weight: 700;
+      flex-shrink: 0;
+      margin-top: 1px;
+    }
+
+    /* Projects gallery */
+    .projects-full { padding: 100px 5%; background: var(--steel); }
+    .projects-full .container { max-width: 1300px; margin: 0 auto; }
+
+    .projects-gallery {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 1.5rem;
+      margin-top: 3rem;
+    }
+
+    .gallery-item {
+      border-radius: var(--radius-lg);
+      overflow: hidden;
+      background: var(--card);
+      border: 1px solid var(--border);
+    }
+
+    .gallery-imgs {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 2px;
+    }
+
+    .gallery-imgs img {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+      transition: transform 0.5s ease;
+    }
+
+    .gallery-item:hover .gallery-imgs img { transform: scale(1.04); }
+
+    .gallery-info {
+      padding: 1.5rem;
+    }
+
+    .gallery-info h4 {
+      font-family: var(--font-display);
+      font-weight: 700;
+      font-size: 1rem;
+      color: var(--white);
+      margin-bottom: 0.4rem;
+    }
+
+    .gallery-info p {
+      font-size: 0.85rem;
+      color: var(--ash);
+    }
+
+    @media (max-width: 1024px) {
+      .service-full-inner { grid-template-columns: 1fr; }
+      .service-full:nth-child(even) .service-full-inner { direction: ltr; }
+      .service-full-img { height: 300px; }
+      .projects-gallery { grid-template-columns: 1fr; }
+    }
+
+    @media (max-width: 768px) {
+      .gallery-imgs img { height: 140px; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- NAVBAR -->
+  <nav class="navbar">
+    <div class="nav-logo">
+      <img src="https://claud-spring.vercel.app/assets/logo (2).png" alt="Claud Spring Logo" />
+      <span class="nav-logo-text">Claud<span>Spring</span></span>
+    </div>
+    <ul class="nav-links">
+      <li><a href="../index.html">Home</a></li>
+      <li><a href="service.html" class="active">Services</a></li>
+      <li><a href="../contacpage/contact.html">Contact</a></li>
+      <li><a href="../contacpage/contact.html" class="nav-cta">Get a Quote</a></li>
+    </ul>
+    <button class="hamburger" aria-label="Toggle menu">
+      <span></span><span></span><span></span>
+    </button>
+  </nav>
+
+  <div class="mobile-nav">
+    <a href="../index.html">Home</a>
+    <a href="service.html">Services</a>
+    <a href="../contacpage/contact.html">Contact</a>
+    <a href="../contacpage/contact.html" class="nav-cta">Get a Quote</a>
+  </div>
+
+  <!-- PAGE HERO -->
+  <div class="page-hero">
+    <div class="page-hero-inner">
+      <span class="section-eyebrow">What We Offer</span>
+      <h1>Our <span>Services</span></h1>
+      <p>Five powerful service lines designed to empower homes, communities, and businesses across Nigeria with sustainable, high-quality solutions.</p>
+    </div>
+  </div>
+
+  <!-- SERVICE 1: Solar -->
+  <div class="service-full">
+    <div class="service-full-inner">
+      <img class="service-full-img reveal-left"
+           src="https://images.unsplash.com/photo-1509391366360-2e959784a276?w=900&auto=format&fit=crop"
+           alt="Solar panels" />
+      <div class="service-full-text reveal-right">
+        <span class="section-eyebrow">Service 01</span>
+        <h2 class="service-full-title">Solar Energy <span>Solutions</span></h2>
+        <div class="divider"></div>
+        <p class="service-full-desc">
+          We provide reliable, affordable, and sustainable solar energy systems for homes and businesses across Nigeria. From your first consultation to full installation and after-service support, our certified engineers handle everything — so you can enjoy clean, uninterrupted power.
+        </p>
+        <div class="service-features">
+          <div class="service-feature">On-site solar assessment and system design</div>
+          <div class="service-feature">Supply and installation of solar panels, batteries & inverters</div>
+          <div class="service-feature">Grid-tied, off-grid, and hybrid system options</div>
+          <div class="service-feature">Reduce electricity bills by up to 90%</div>
+          <div class="service-feature">Maintenance plans and warranty support</div>
+        </div>
+        <a href="../contacpage/contact.html" class="btn-primary">
+          Request a Solar Quote
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <!-- SERVICE 2: Farmland -->
+  <div class="service-full">
+    <div class="service-full-inner">
+      <img class="service-full-img reveal-right"
+           src="https://images.unsplash.com/photo-1500382017468-9049fed747ef?w=900&auto=format&fit=crop"
+           alt="Farmland aerial" />
+      <div class="service-full-text reveal-left">
+        <span class="section-eyebrow">Service 02</span>
+        <h2 class="service-full-title">Farm Land <span>Acquisition</span></h2>
+        <div class="divider"></div>
+        <p class="service-full-desc">
+          Whether you're a first-time investor, an experienced farmer, or a business looking to scale in agribusiness, we connect you with verified, fertile land opportunities across Nigeria. Every deal is handled transparently — from land scouting to documentation and title verification.
+        </p>
+        <div class="service-features">
+          <div class="service-feature">Verified titles and secure legal documentation</div>
+          <div class="service-feature">Land scouting across Kwara, Oyo and other key states</div>
+          <div class="service-feature">Expert guidance for first-time and seasoned investors</div>
+          <div class="service-feature">Agricultural feasibility assessments</div>
+          <div class="service-feature">Post-purchase land development planning</div>
+        </div>
+        <a href="../contacpage/contact.html" class="btn-primary">
+          Find Farmland
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <!-- SERVICE 3: Real Estate -->
+  <div class="service-full">
+    <div class="service-full-inner">
+      <img class="service-full-img reveal-left"
+           src="https://images.unsplash.com/photo-1486325212027-8081e485255e?w=900&auto=format&fit=crop"
+           alt="Modern construction" />
+      <div class="service-full-text reveal-right">
+        <span class="section-eyebrow">Service 03</span>
+        <h2 class="service-full-title">Real Estate &amp; <span>Construction</span></h2>
+        <div class="divider"></div>
+        <p class="service-full-desc">
+          Claud Spring delivers quality craftsmanship across new constructions, complete renovations, and reconstruction works. Whether it's a dream home, commercial complex, or a full remodel — we bring your vision to life with expert planning, skilled execution, and on-time delivery.
+        </p>
+        <div class="service-features">
+          <div class="service-feature">Residential and commercial construction from scratch</div>
+          <div class="service-feature">Renovation and remodelling for existing structures</div>
+          <div class="service-feature">Land fencing, perimeter walls, and security infrastructure</div>
+          <div class="service-feature">Architectural planning and Bill of Quantities</div>
+          <div class="service-feature">Factory and industrial facility construction</div>
+        </div>
+        <a href="../contacpage/contact.html" class="btn-primary">
+          Discuss Your Build
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <!-- SERVICE 4: Crop Farming -->
+  <div class="service-full">
+    <div class="service-full-inner">
+      <img class="service-full-img reveal-right"
+           src="https://images.unsplash.com/photo-1625246333195-78d9c38ad449?w=900&auto=format&fit=crop"
+           alt="Crop fields" />
+      <div class="service-full-text reveal-left">
+        <span class="section-eyebrow">Service 04</span>
+        <h2 class="service-full-title">Crop <span>Farming</span></h2>
+        <div class="divider"></div>
+        <p class="service-full-desc">
+          We're dedicated to promoting sustainable and profitable agriculture. Using modern farming techniques, we grow and manage high-quality produce — maize, rice, wheat, and vegetables — for both personal farms and commercial agribusiness partnerships.
+        </p>
+        <div class="service-features">
+          <div class="service-feature">Maize, rice, wheat, and vegetable production</div>
+          <div class="service-feature">Modern irrigation and input management</div>
+          <div class="service-feature">Farm productivity consulting</div>
+          <div class="service-feature">Harvest and post-harvest handling</div>
+          <div class="service-feature">Agribusiness partnership opportunities</div>
+        </div>
+        <a href="../contacpage/contact.html" class="btn-primary">
+          Start Your Farm Journey
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <!-- SERVICE 5: Biodigester -->
+  <div class="service-full">
+    <div class="service-full-inner">
+      <img class="service-full-img reveal-left"
+           src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=900&auto=format&fit=crop"
+           alt="Eco-system" />
+      <div class="service-full-text reveal-right">
+        <span class="section-eyebrow">Service 05</span>
+        <h2 class="service-full-title">Biodigester <span>Sewage Systems</span></h2>
+        <div class="divider"></div>
+        <p class="service-full-desc">
+          We design and construct biodigester sewage systems that are sustainable, low-maintenance, and cost-effective. Our systems naturally treat wastewater — producing clean water for reuse and biogas for cooking or lighting. Suitable for homes, schools, farms, and commercial properties.
+        </p>
+        <div class="service-features">
+          <div class="service-feature">Custom-designed for residential, commercial &amp; institutional use</div>
+          <div class="service-feature">Zero chemical treatment — fully natural biological process</div>
+          <div class="service-feature">Produces biogas (renewable fuel) and treated water</div>
+          <div class="service-feature">Low-maintenance, long-lasting systems</div>
+          <div class="service-feature">Compliant with Nigerian environmental standards</div>
+        </div>
+        <a href="../contacpage/contact.html" class="btn-primary">
+          Get a System Quote
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <!-- PROJECTS GALLERY -->
+  <div class="projects-full">
+    <div class="container">
+      <div class="reveal" style="text-align:center; max-width:600px; margin:0 auto;">
+        <span class="section-eyebrow">Proof of Work</span>
+        <h2 class="section-title">Our Completed <span>Projects</span></h2>
+        <div class="divider" style="margin:1rem auto;"></div>
+        <p class="section-sub" style="margin:0 auto;">
+          Real projects, real results. A look at some of our most impactful work across Nigeria.
+        </p>
+      </div>
+
+      <div class="projects-gallery">
+        <div class="gallery-item reveal">
+          <div class="gallery-imgs">
+            <img src="https://claud-spring.vercel.app/assets/cg1.jpg" alt="Dadmar Water project 1" />
+            <img src="https://claud-spring.vercel.app/assets/cg2.jpg" alt="Dadmar Water project 2" />
+          </div>
+          <div class="gallery-info">
+            <span class="project-tag" style="margin-bottom:0.5rem;">Construction</span>
+            <h4>Dadmar Water — Construction &amp; Equipment Installation</h4>
+            <p>Full construction and installation of water processing equipment for Dadmar, Ibadan.</p>
+          </div>
+        </div>
+
+        <div class="gallery-item reveal">
+          <div class="gallery-imgs">
+            <img src="https://claud-spring.vercel.app/assets/s3.jpg" alt="Biodigester 1" />
+            <img src="https://claud-spring.vercel.app/assets/s2.jpg" alt="Biodigester 2" />
+          </div>
+          <div class="gallery-info">
+            <span class="project-tag" style="margin-bottom:0.5rem;">Sanitation</span>
+            <h4>Biodigester Sewage System — Private Client</h4>
+            <p>Design, construction, and commissioning of a complete biodigester sewage system.</p>
+          </div>
+        </div>
+
+        <div class="gallery-item reveal">
+          <div class="gallery-imgs">
+            <img src="https://claud-spring.vercel.app/assets/fg4.jpg" alt="Land fencing 1" />
+            <img src="https://claud-spring.vercel.app/assets/fg3.jpg" alt="Land fencing 2" />
+          </div>
+          <div class="gallery-info">
+            <span class="project-tag" style="margin-bottom:0.5rem;">Real Estate</span>
+            <h4>2-Acre Land Fencing — Foreign Client</h4>
+            <p>Full perimeter fencing of a 2-acre plot in Apata, Ibadan for an international client.</p>
+          </div>
+        </div>
+
+        <div class="gallery-item reveal">
+          <div class="gallery-imgs">
+            <img src="https://claud-spring.vercel.app/assets/f1.jpg" alt="Fish farm 1" />
+            <img src="https://claud-spring.vercel.app/assets/f2.jpg" alt="Fish farm 2" />
+          </div>
+          <div class="gallery-info">
+            <span class="project-tag" style="margin-bottom:0.5rem;">Agriculture</span>
+            <h4>Fish Farm Construction — Client Project</h4>
+            <p>Complete design and construction of a functional fish farm facility for a private client.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- CTA BAND -->
+  <section style="padding:80px 5%; background:linear-gradient(135deg, #FF6B00, #FF8C00); text-align:center;">
+    <div class="container">
+      <h2 style="font-family:var(--font-display);font-weight:800;font-size:clamp(1.8rem,3.5vw,2.5rem);color:#000;margin-bottom:1rem;letter-spacing:-0.02em;">
+        Ready to Start Your Project?
+      </h2>
+      <p style="font-size:1rem;color:rgba(0,0,0,0.7);max-width:480px;margin:0 auto 2rem;line-height:1.7;">
+        Contact our team today for a free consultation. We'll help you find the right solution for your goals.
+      </p>
+      <a href="../contacpage/contact.html"
+         style="display:inline-flex;align-items:center;gap:8px;background:#000;color:#fff;font-weight:700;font-size:0.95rem;padding:16px 32px;border-radius:8px;transition:opacity 0.2s;">
+        Contact Us Now
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+      </a>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <div class="footer-logo">
+            <img src="https://claud-spring.vercel.app/assets/logo (2).png" alt="Claud Spring" />
+            <span class="footer-logo-text">Claud<span>Spring</span></span>
+          </div>
+          <p class="footer-desc">Empowering growth across Nigeria with renewable energy, sustainable agriculture, real estate, and infrastructure.</p>
+          <div class="footer-socials">
+            <a href="https://www.facebook.com/share/1BqFnEMDG3/" target="_blank" class="social-btn" aria-label="Facebook">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"/></svg>
+            </a>
+            <a href="https://wa.me/message/MHIM6RMN6RN6F1" target="_blank" class="social-btn" aria-label="WhatsApp">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+            </a>
+          </div>
+        </div>
+        <div class="footer-col">
+          <h6>Navigation</h6>
+          <ul>
+            <li><a href="../index.html">Home</a></li>
+            <li><a href="service.html">Services</a></li>
+            <li><a href="../contacpage/contact.html">Contact</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h6>Services</h6>
+          <ul>
+            <li><a href="#">Solar Energy</a></li>
+            <li><a href="#">Farm Land</a></li>
+            <li><a href="#">Real Estate</a></li>
+            <li><a href="#">Crop Farming</a></li>
+            <li><a href="#">Biodigester</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h6>Contact</h6>
+          <p>📞 <a href="tel:09120935011">09120935011</a></p>
+          <p>✉️ <a href="mailto:Claudspringgr47@yahoo.com">Claudspringgr47@yahoo.com</a></p>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>© 2025 Claud Spring. All rights reserved.</p>
+        <p>Designed with ❤️ for sustainable Nigeria</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="../main.js"></script>
+</body>
+</html>
