@@ -1,0 +1,479 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Contact Claud Spring — Reach our team in Ilorin and Ibadan for all your solar, agriculture, real estate and construction needs." />
+  <title>Contact Us | Claud Spring</title>
+  <link rel="stylesheet" href="../style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <style>
+    /* Contact page extras */
+    .contact-page-main {
+      padding: 100px 5%;
+      background: var(--black);
+    }
+
+    .contact-page-grid {
+      max-width: 1300px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: 1fr 1.4fr;
+      gap: 5rem;
+      align-items: start;
+    }
+
+    /* Offices */
+    .offices { padding: 100px 5%; background: var(--steel); }
+    .offices .container { max-width: 1300px; margin: 0 auto; }
+
+    .offices-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 2rem;
+      margin-top: 3rem;
+    }
+
+    .office-card {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-lg);
+      padding: 2.5rem 2rem;
+      position: relative;
+      overflow: hidden;
+      transition: border-color var(--transition), transform var(--transition);
+    }
+
+    .office-card:hover {
+      border-color: var(--orange);
+      transform: translateY(-4px);
+    }
+
+    .office-card::before {
+      content: '';
+      position: absolute;
+      top: 0; left: 0; right: 0;
+      height: 3px;
+      background: linear-gradient(90deg, var(--orange), var(--spark));
+    }
+
+    .office-name {
+      font-family: var(--font-display);
+      font-weight: 800;
+      font-size: 1.3rem;
+      color: var(--white);
+      margin-bottom: 1.25rem;
+    }
+
+    .office-detail {
+      display: flex;
+      gap: 10px;
+      margin-bottom: 0.9rem;
+      font-size: 0.9rem;
+      color: var(--ash);
+      align-items: flex-start;
+    }
+
+    .office-detail-icon { font-size: 1rem; flex-shrink: 0; margin-top: 1px; }
+    .office-detail a { color: var(--muted); transition: color var(--transition); }
+    .office-detail a:hover { color: var(--orange); }
+
+    /* FAQ */
+    .faq { padding: 100px 5%; background: var(--card); }
+    .faq .container { max-width: 900px; margin: 0 auto; }
+    .faq-header { text-align: center; margin-bottom: 3rem; }
+
+    .faq-list { display: flex; flex-direction: column; gap: 1px; background: var(--border); border-radius: var(--radius-lg); overflow: hidden; }
+
+    .faq-item { background: var(--steel); }
+
+    .faq-question {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 1.5rem 2rem;
+      cursor: pointer;
+      font-weight: 600;
+      font-size: 0.95rem;
+      color: var(--white);
+      transition: background var(--transition);
+      user-select: none;
+    }
+
+    .faq-question:hover { background: var(--card); }
+    .faq-question.open { color: var(--orange); }
+
+    .faq-icon {
+      width: 24px; height: 24px;
+      border-radius: 50%;
+      background: var(--border);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+      transition: background var(--transition), transform var(--transition);
+      font-size: 1rem;
+    }
+
+    .faq-question.open .faq-icon {
+      background: var(--orange);
+      transform: rotate(45deg);
+    }
+
+    .faq-answer {
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 0.35s ease, padding 0.25s ease;
+      padding: 0 2rem;
+    }
+
+    .faq-answer.open {
+      max-height: 300px;
+      padding: 0 2rem 1.5rem;
+    }
+
+    .faq-answer p {
+      font-size: 0.9rem;
+      color: var(--ash);
+      line-height: 1.75;
+    }
+
+    @media (max-width: 1024px) {
+      .contact-page-grid { grid-template-columns: 1fr; gap: 3rem; }
+      .offices-grid { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- NAVBAR -->
+  <nav class="navbar">
+    <div class="nav-logo">
+      <img src="https://claud-spring.vercel.app/assets/logo (2).png" alt="Claud Spring Logo" />
+      <span class="nav-logo-text">Claud<span>Spring</span></span>
+    </div>
+    <ul class="nav-links">
+      <li><a href="../index.html">Home</a></li>
+      <li><a href="../servicepage/service.html">Services</a></li>
+      <li><a href="contact.html" class="active">Contact</a></li>
+      <li><a href="contact.html" class="nav-cta">Get a Quote</a></li>
+    </ul>
+    <button class="hamburger" aria-label="Toggle menu">
+      <span></span><span></span><span></span>
+    </button>
+  </nav>
+
+  <div class="mobile-nav">
+    <a href="../index.html">Home</a>
+    <a href="../servicepage/service.html">Services</a>
+    <a href="contact.html">Contact</a>
+    <a href="contact.html" class="nav-cta">Get a Quote</a>
+  </div>
+
+  <!-- PAGE HERO -->
+  <div class="page-hero">
+    <div class="page-hero-inner">
+      <span class="section-eyebrow">Get In Touch</span>
+      <h1>Contact <span>Us</span></h1>
+      <p>We're committed to top-quality solutions. Whether you're ready to start a project or simply have questions — our team is here to help you every step of the way.</p>
+    </div>
+  </div>
+
+  <!-- CONTACT MAIN -->
+  <div class="contact-page-main">
+    <div class="contact-page-grid">
+
+      <!-- Info side -->
+      <div class="reveal-left">
+        <span class="section-eyebrow">Quick Contact</span>
+        <h2 class="contact-info-title">Let's Connect &amp;<br/>Make Things Happen</h2>
+        <div class="divider"></div>
+        <p class="contact-info-desc">
+          Use any of the channels below to reach the right department. We'll get back to you as soon as possible — usually within 24 hours.
+        </p>
+
+        <div class="contact-details">
+          <div class="contact-item">
+            <div class="contact-item-icon">📞</div>
+            <div class="contact-item-text">
+              <h5>Phone / WhatsApp</h5>
+              <a href="tel:09120935011">09120935011</a>
+            </div>
+          </div>
+          <div class="contact-item">
+            <div class="contact-item-icon">✉️</div>
+            <div class="contact-item-text">
+              <h5>Email</h5>
+              <a href="mailto:Claudspringgr47@yahoo.com">Claudspringgr47@yahoo.com</a>
+            </div>
+          </div>
+          <div class="contact-item">
+            <div class="contact-item-icon">⏰</div>
+            <div class="contact-item-text">
+              <h5>Business Hours</h5>
+              <p>Monday – Friday: 8:00 AM – 6:00 PM</p>
+              <p>Saturday: 9:00 AM – 2:00 PM</p>
+            </div>
+          </div>
+        </div>
+
+        <div style="margin-bottom:1.5rem;">
+          <h5 style="font-size:0.85rem;font-weight:600;color:var(--white);margin-bottom:0.75rem;">Find Us On</h5>
+          <div class="contact-socials">
+            <a href="https://www.facebook.com/share/1BqFnEMDG3/" target="_blank" class="social-btn" aria-label="Facebook" title="Facebook">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"/></svg>
+            </a>
+            <a href="https://wa.me/message/MHIM6RMN6RN6F1" target="_blank" class="social-btn" aria-label="WhatsApp" title="WhatsApp">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+            </a>
+            <a href="mailto:Claudspringgr47@yahoo.com" class="social-btn" aria-label="Email" title="Email">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Form side -->
+      <div class="reveal-right">
+        <form class="contact-form" id="contact-form" action="https://formsubmit.co/Claudspringgr47@yahoo.com" method="POST" novalidate style="background:var(--card);padding:2.5rem;border-radius:var(--radius-lg);border:1px solid var(--border);">
+          <input type="hidden" name="_captcha" value="false" />
+          <input type="hidden" name="_template" value="table" />
+          <input type="hidden" name="_next" value="contact.html" />
+          <h3 style="font-family:var(--font-display);font-weight:800;font-size:1.3rem;color:var(--white);margin-bottom:1.75rem;">Send Us a Message</h3>
+          <div class="form-row">
+            <div class="form-group">
+              <label for="first-name">First Name</label>
+              <input type="text" id="first-name" name="first-name" placeholder="John" required />
+            </div>
+            <div class="form-group">
+              <label for="last-name">Last Name</label>
+              <input type="text" id="last-name" name="last-name" placeholder="Doe" required />
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="email">Email Address</label>
+            <input type="email" id="email" name="email" placeholder="john@example.com" required />
+          </div>
+          <div class="form-group">
+            <label for="phone">Phone Number</label>
+            <input type="tel" id="phone" name="phone" placeholder="+234 000 000 0000" />
+          </div>
+          <div class="form-group">
+            <label for="service">Service of Interest</label>
+            <select id="service" name="service">
+              <option value="" disabled selected>Select a service…</option>
+              <option value="solar">Solar Energy Solutions</option>
+              <option value="farmland">Farm Land Acquisition</option>
+              <option value="real-estate">Real Estate &amp; Construction</option>
+              <option value="crop">Crop Farming</option>
+              <option value="biodigester">Biodigester Sewage System</option>
+              <option value="other">Other / General Inquiry</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="budget">Approximate Budget</label>
+            <select id="budget" name="budget">
+              <option value="" disabled selected>Select a range…</option>
+              <option>Under ₦500,000</option>
+              <option>₦500,000 – ₦2,000,000</option>
+              <option>₦2,000,000 – ₦10,000,000</option>
+              <option>₦10,000,000 – ₦50,000,000</option>
+              <option>Above ₦50,000,000</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="message">Your Message</label>
+            <textarea id="message" name="message" placeholder="Tell us about your project, timeline, location, or any questions you have…" required></textarea>
+          </div>
+          <div id="form-success" class="form-success">
+            ✅ Thank you! Your message has been received. We'll be in touch within 24 hours.
+          </div>
+          <button type="submit" class="form-submit">
+            Send Message
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg>
+          </button>
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <!-- OFFICES -->
+  <div class="offices">
+    <div class="container">
+      <div class="reveal" style="text-align:center; max-width:600px; margin:0 auto;">
+        <span class="section-eyebrow">Our Locations</span>
+        <h2 class="section-title">Two Offices,<br/><span>One Team</span></h2>
+        <div class="divider" style="margin:1rem auto;"></div>
+        <p class="section-sub" style="margin:0 auto;">Serving clients from both our Ilorin and Ibadan offices across Kwara, Oyo, and beyond.</p>
+      </div>
+
+      <div class="offices-grid">
+        <div class="office-card reveal">
+          <div class="office-name">🏢 Ilorin Office</div>
+          <div class="office-detail">
+            <span class="office-detail-icon">📍</span>
+            <span>B5, Oluyori Street, off Asa Dam Road, Budo Iya, Ilorin, Kwara State.</span>
+          </div>
+          <div class="office-detail">
+            <span class="office-detail-icon">📞</span>
+            <a href="tel:09120935011">09120935011</a>
+          </div>
+          <div class="office-detail">
+            <span class="office-detail-icon">✉️</span>
+            <a href="mailto:Claudspringgr47@yahoo.com">Claudspringgr47@yahoo.com</a>
+          </div>
+          <div class="office-detail">
+            <span class="office-detail-icon">⏰</span>
+            <span>Mon–Fri: 8AM – 6PM | Sat: 9AM – 2PM</span>
+          </div>
+        </div>
+
+        <div class="office-card reveal">
+          <div class="office-name">🏢 Ibadan Office</div>
+          <div class="office-detail">
+            <span class="office-detail-icon">📍</span>
+            <span>Ifesowapo Estate, Along Railway Line, Molarere, Moniya, Ibadan, Oyo State.</span>
+          </div>
+          <div class="office-detail">
+            <span class="office-detail-icon">📞</span>
+            <a href="tel:09120935011">09120935011</a>
+          </div>
+          <div class="office-detail">
+            <span class="office-detail-icon">✉️</span>
+            <a href="mailto:Claudspringgr47@yahoo.com">Claudspringgr47@yahoo.com</a>
+          </div>
+          <div class="office-detail">
+            <span class="office-detail-icon">⏰</span>
+            <span>Mon–Fri: 8AM – 6PM | Sat: 9AM – 2PM</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- FAQ -->
+  <div class="faq">
+    <div class="container">
+      <div class="faq-header reveal">
+        <span class="section-eyebrow">Got Questions?</span>
+        <h2 class="section-title">Frequently Asked <span>Questions</span></h2>
+        <div class="divider" style="margin:1rem auto;"></div>
+      </div>
+
+      <div class="faq-list reveal">
+        <div class="faq-item">
+          <div class="faq-question" onclick="toggleFaq(this)">
+            How do I get a quote for solar installation?
+            <span class="faq-icon">+</span>
+          </div>
+          <div class="faq-answer">
+            <p>Simply fill out the contact form above or call/WhatsApp us on 09120935011. Our solar team will schedule a free site assessment and provide a detailed quote within 48 hours.</p>
+          </div>
+        </div>
+        <div class="faq-item">
+          <div class="faq-question" onclick="toggleFaq(this)">
+            Do you handle documentation for farmland purchases?
+            <span class="faq-icon">+</span>
+          </div>
+          <div class="faq-answer">
+            <p>Yes. We handle complete title verification, surveying, deed of assignment, and registration processes. Every land transaction comes with full legal documentation and transparent pricing.</p>
+          </div>
+        </div>
+        <div class="faq-item">
+          <div class="faq-question" onclick="toggleFaq(this)">
+            What areas do you currently serve?
+            <span class="faq-icon">+</span>
+          </div>
+          <div class="faq-answer">
+            <p>We primarily serve clients in Kwara State (Ilorin and environs) and Oyo State (Ibadan and environs). However, we have also completed projects for clients in other states — contact us to discuss your location.</p>
+          </div>
+        </div>
+        <div class="faq-item">
+          <div class="faq-question" onclick="toggleFaq(this)">
+            How long does a typical construction project take?
+            <span class="faq-icon">+</span>
+          </div>
+          <div class="faq-answer">
+            <p>Timelines vary by project scope. A standard residential build typically takes 3–6 months, while renovations can range from weeks to a few months. We provide a detailed timeline during your consultation.</p>
+          </div>
+        </div>
+        <div class="faq-item">
+          <div class="faq-question" onclick="toggleFaq(this)">
+            Do you offer after-installation support?
+            <span class="faq-icon">+</span>
+          </div>
+          <div class="faq-answer">
+            <p>Absolutely. All our solar installations come with a maintenance plan and warranty period. Our biodigester systems also include follow-up service calls to ensure proper operation and performance.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <div class="footer-logo">
+            <img src="https://claud-spring.vercel.app/assets/logo (2).png" alt="Claud Spring" />
+            <span class="footer-logo-text">Claud<span>Spring</span></span>
+          </div>
+          <p class="footer-desc">Empowering growth across Nigeria with renewable energy, sustainable agriculture, real estate, and infrastructure.</p>
+          <div class="footer-socials">
+            <a href="https://www.facebook.com/share/1BqFnEMDG3/" target="_blank" class="social-btn" aria-label="Facebook">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"/></svg>
+            </a>
+            <a href="https://wa.me/message/MHIM6RMN6RN6F1" target="_blank" class="social-btn" aria-label="WhatsApp">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+            </a>
+          </div>
+        </div>
+        <div class="footer-col">
+          <h6>Navigation</h6>
+          <ul>
+            <li><a href="../index.html">Home</a></li>
+            <li><a href="../servicepage/service.html">Services</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h6>Services</h6>
+          <ul>
+            <li><a href="../servicepage/service.html">Solar Energy</a></li>
+            <li><a href="../servicepage/service.html">Farm Land</a></li>
+            <li><a href="../servicepage/service.html">Real Estate</a></li>
+            <li><a href="../servicepage/service.html">Crop Farming</a></li>
+            <li><a href="../servicepage/service.html">Biodigester</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h6>Contact</h6>
+          <p>📞 <a href="tel:09120935011">09120935011</a></p>
+          <p>✉️ <a href="mailto:Claudspringgr47@yahoo.com">Claudspringgr47@yahoo.com</a></p>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>© 2025 Claud Spring. All rights reserved.</p>
+        <p>Designed with ❤️ for sustainable Nigeria</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="../main.js"></script>
+  <script>
+    function toggleFaq(el) {
+      const answer = el.nextElementSibling;
+      const isOpen = el.classList.contains('open');
+      // Close all
+      document.querySelectorAll('.faq-question').forEach(q => q.classList.remove('open'));
+      document.querySelectorAll('.faq-answer').forEach(a => a.classList.remove('open'));
+      // Open clicked if not already open
+      if (!isOpen) {
+        el.classList.add('open');
+        answer.classList.add('open');
+      }
+    }
+  </script>
+</body>
+</html>
